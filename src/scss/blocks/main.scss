@@ -1,0 +1,168 @@
+%line {
+  display: inline-block;
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #8b8371;
+  @media (max-width: $xl) {
+    width: 30px;
+  }
+  @media (max-width: $md) {
+    width: 20px;
+  }
+}
+.main {
+  padding: 0 0 38px 0;
+  @media (max-width: $lg) {
+    padding: 10px 0 20px;
+  }
+  &__container {
+    display: flex;
+    overflow: hidden;
+    background-color: $backgroundColor;
+    @media (max-width: $md) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 30px;
+    }
+  }
+  &__content {
+    position: relative;
+    align-self: center;
+    padding-left: 7.44%;
+    width: 37%;
+    color: $darkColor;
+    z-index: 30;
+    @media (max-width: $md) {
+      padding-left: 40px;
+      width: 70%;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+    &:before {
+      position: absolute;
+      @extend %line;
+      top: 35px;
+      left: 20px;
+      @media (max-width: $lg) {
+        top: 25px;
+        left: 15px;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 5px;
+    white-space: nowrap;
+  }
+  &__subtitle {
+    margin-bottom: 30px;
+    font-family: "PlayfairDisplay";
+    font-size: calc(1.875 * $fontSize);
+    line-height: 1.33;
+    @media (max-width: $lg) {
+      margin-bottom: 10px;
+      font-size: calc(1.5 * $fontSize);
+    }
+    @media (max-width: $md) {
+      font-size: calc(1.2 * $fontSize);
+    }
+  }
+  &__description {
+    margin-bottom: 60px;
+    width: 77%;
+    font-family: $fontFamily;
+    font-size: calc(0.875 * $fontSize);
+    font-weight: 300;
+    line-height: 1.5;
+    @media (max-width: $lg) {
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: calc(0.75 * $fontSize);
+    }
+  }
+  &_btn {
+    color: #fff;
+    background-color: $mainColor;
+  }
+  &__watches-big {
+    position: relative;
+    margin-left: 11%;
+    height: 56.4vw;
+    max-height: calc(0.564 * $maxWidth);
+    @media (max-width: $md) {
+      margin: 0;
+      height: 40vw;
+    }
+    @media (max-width: $sm) {
+      height: 50vw;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 98%;
+      height: 123%;
+      top: 0;
+      left: 0;
+      border-radius: 100% 0 0 100% / 50% 0 0 50%;
+      background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #eae3d4 100%);
+      transform: translate(-39%, -10%);
+      z-index: 10;
+    }
+  }
+}
+.watches-big {
+  font-family: "Prata";
+  font-size: $fontSize;
+  line-height: 1.375;
+  color: $darkColor;
+  @media (max-width: $md) {
+    font-size: calc(0.8 * $fontSize);
+  }
+  img {
+    position: relative;
+    height: 100%;
+    z-index: 20;
+  }
+  &__price {
+    position: absolute;
+    display: flex;
+    align-items: baseline;
+    top: 18.2%;
+    left: -76px;
+    @media (max-width: $lg) {
+      font-size: calc(0.8 * $fontSize);
+      left: -60px;
+      svg {
+        height: 11px;
+      }
+    }
+    &:after {
+      @extend %line;
+      align-self: center;
+      margin: 0 0 2px 15px;
+      @media (max-width: $lg) {
+        margin: 0 0 2px 5px;
+      }
+    }
+  }
+  &__diameter {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 14.1%;
+    right: -85px;
+    @media (max-width: $lg) {
+      font-size: calc(0.8 * $fontSize);
+      left: 70%;
+    }
+    &:before {
+      @extend %line;
+      margin: 0 15px 5px 0;
+      @media (max-width: $lg) {
+        margin: 0 5px 2px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $mainColor;
+  background-color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $maxWidth;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: $maxWidthContainer;
+  min-width: $minWidth;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: $xl) {
+    max-width: 970px;
+  }
+  @media (max-width: $lg) {
+    max-width: 750px;
+  }
+  @media (max-width: $md) {
+    max-width: none;
+    padding: 0 15px;
+  }
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+section {
+  overflow: hidden;
+}
+
+a:hover,
+a:active {
+  color: #d4b098;
+  transition: all 0.4s ease 0s;
+}
+
+.title {
+  font-family: "PlayfairDisplay";
+  font-size: calc(2.81 * $fontSize);
+  line-height: 1.33;
+  color: $darkColor;
+  @media (max-width: $xl) {
+    font-size: calc(2.3 * $fontSize);
+  }
+  @media (max-width: $lg) {
+    font-size: calc(2 * $fontSize);
+  }
+  @media (max-width: $md) {
+    font-size: calc(1.8 * $fontSize);
+  }
+}
+
+.title2 {
+  font-family: "PlayfairDisplay";
+  font-size: calc(2 * $fontSize);
+  line-height: 1.33;
+  color: $darkColor;
+  @media (max-width: $xl) {
+    font-size: calc(1.8 * $fontSize);
+  }
+  @media (max-width: $md) {
+    font-size: calc(1.2 * $fontSize);
+  }
+}
+.btn {
+  display: inline-block;
+  font-family: $fontFamily;
+  font-size: calc(0.75 * $fontSize);
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 26px 38px;
+  @media (max-width: $md) {
+    padding: 13px 20px;
+  }
+}
