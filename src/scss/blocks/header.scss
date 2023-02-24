@@ -26,9 +26,13 @@
   &__actions {
     flex: 0 0 auto;
     margin-left: 22.5%;
+    margin-top: 12px;
     display: flex;
     justify-content: flex-end;
     column-gap: 23px;
+    @media (max-width: $md) {
+      margin-top: 0;
+    }
     @media (max-width: $sm) {
       order: 2;
       margin: 0;
@@ -85,7 +89,6 @@
     }
   }
   &__link {
-    font-family: $fontFamily;
     font-size: calc(0.875 * $fontSize);
     line-height: 1.17;
     color: #555248;
@@ -137,5 +140,25 @@
         bottom: calc(50% - 1.5px);
       }
     }
+  }
+}
+.like {
+  position: relative;
+  cursor: pointer;
+  &__badge {
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(0.875 * $fontSize);
+    height: calc(0.875 * $fontSize);
+    border-radius: 50%;
+    background-color: #e6c8b4;
+    font-family: $fontFamily;
+    font-size: calc(0.5 * $fontSize);
+    line-height: 1;
+    color: $darkColor;
   }
 }

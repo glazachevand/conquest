@@ -72,7 +72,6 @@
   &__description {
     margin-bottom: 60px;
     width: 77%;
-    font-family: $fontFamily;
     font-size: calc(0.875 * $fontSize);
     font-weight: 300;
     line-height: 1.5;
@@ -117,7 +116,7 @@
   font-size: $fontSize;
   line-height: 1.375;
   color: $darkColor;
-  @media (max-width: $md) {
+  @media (max-width: $lg) {
     font-size: calc(0.8 * $fontSize);
   }
   img {
@@ -132,7 +131,6 @@
     top: 18.2%;
     left: -76px;
     @media (max-width: $lg) {
-      font-size: calc(0.8 * $fontSize);
       left: -60px;
       svg {
         height: 11px;
@@ -154,7 +152,6 @@
     bottom: 14.1%;
     right: -85px;
     @media (max-width: $lg) {
-      font-size: calc(0.8 * $fontSize);
       left: 70%;
     }
     &:before {
