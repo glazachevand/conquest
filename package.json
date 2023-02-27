@@ -1,11 +1,14 @@
 {
-  "name": "gulp_codequest_my",
+  "name": "codequest",
   "version": "1.0.0",
+  "homepage": "https://github.com/glazachevand/conquest",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp --production"
+    "build": "gulp --production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 3 versions"
