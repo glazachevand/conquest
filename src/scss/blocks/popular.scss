@@ -11,7 +11,7 @@
     margin: -5px 0 24px;
     text-align: right;
     font-weight: 500;
-    line-height: 1.17;
+    line-height: normal;
     color: $mainColor;
     cursor: pointer;
     @media (max-width: $lg) {
@@ -19,7 +19,7 @@
       font-size: calc(0.8 * $fontSize);
     }
     &:hover {
-      color: #d4b098;
+      color: $pinkColor;
       transition: all 0.4s ease 0s;
     }
     span {
@@ -46,7 +46,7 @@
     color: $darkColor;
     &:hover,
     &:active {
-      color: #d4b098;
+      color: $pinkColor;
       transition: all 0.4s ease 0s;
     }
   }
@@ -56,14 +56,14 @@
   &__title {
     margin-bottom: 4px;
     font-family: "PlayfairDisplay";
-    font-size: calc(0.875 * $fontSize);
+    font-size: 0.875rem;
     font-weight: bold;
     line-height: 1.73;
     text-transform: uppercase;
   }
   &__price {
     font-family: "Prata";
-    font-size: calc(0.75 * $fontSize);
+    font-size: 0.75rem;
     line-height: 1.33;
   }
   &__img {
@@ -78,7 +78,7 @@
       margin: 0 auto 15px;
     }
     @media (max-width: $md) {
-      width: 80%;
+      width: 60%;
     }
     &::before {
       position: absolute;

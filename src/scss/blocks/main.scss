@@ -24,7 +24,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      row-gap: 30px;
+      row-gap: 40px;
     }
   }
   &__content {
@@ -37,9 +37,6 @@
     @media (max-width: $md) {
       padding-left: 40px;
       width: 70%;
-    }
-    @media (max-width: $sm) {
-      width: 100%;
     }
     &:before {
       position: absolute;
@@ -54,31 +51,30 @@
   }
   &__title {
     margin-bottom: 5px;
-    white-space: nowrap;
   }
   &__subtitle {
     margin-bottom: 30px;
     font-family: "PlayfairDisplay";
-    font-size: calc(1.875 * $fontSize);
+    font-size: 1.875rem;
     line-height: 1.33;
     @media (max-width: $lg) {
       margin-bottom: 10px;
-      font-size: calc(1.5 * $fontSize);
+      font-size: 1.5rem;
     }
     @media (max-width: $md) {
-      font-size: calc(1.2 * $fontSize);
+      font-size: 1.2rem;
     }
   }
   &__description {
     margin-bottom: 60px;
     width: 77%;
-    font-size: calc(0.875 * $fontSize);
+    font-size: 0.875rem;
     font-weight: 300;
     line-height: 1.5;
     @media (max-width: $lg) {
       width: 100%;
       margin-bottom: 15px;
-      font-size: calc(0.75 * $fontSize);
+      font-size: 0.75rem;
     }
   }
   &_btn {
@@ -107,21 +103,21 @@
       border-radius: 100% 0 0 100% / 50% 0 0 50%;
       background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #eae3d4 100%);
       transform: translate(-39%, -10%);
-      z-index: 10;
     }
   }
 }
 .watches-big {
   font-family: "Prata";
-  font-size: $fontSize;
+  font-size: 1rem;
   line-height: 1.375;
   color: $darkColor;
   @media (max-width: $lg) {
-    font-size: calc(0.8 * $fontSize);
+    font-size: 0.8rem;
   }
   img {
     position: relative;
     height: 100%;
+    object-fit: cover;
     z-index: 20;
   }
   &__price {
@@ -130,10 +126,11 @@
     align-items: baseline;
     top: 18.2%;
     left: -76px;
+    z-index: 30;
     @media (max-width: $lg) {
       left: -60px;
       svg {
-        height: 11px;
+        height: 0.8em;
       }
     }
     &:after {
@@ -151,6 +148,7 @@
     align-items: center;
     bottom: 14.1%;
     right: -85px;
+    z-index: 30;
     @media (max-width: $lg) {
       left: 70%;
     }

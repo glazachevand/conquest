@@ -1,9 +1,7 @@
-.footer-items {
-  font-size: calc(0.75 * $fontSize);
-  line-height: 1.17;
-}
 .footer {
   padding-top: 45px;
+  font-size: 0.75rem;
+  line-height: normal;
   @media (max-width: $lg) {
     padding-top: 20px;
   }
@@ -23,16 +21,13 @@
       color: #fff;
       &:hover,
       &:active {
-        color: #d4b098;
+        color: $pinkColor;
         transition: all 0.4s ease 0s;
       }
     }
   }
   &__content {
     margin-right: 20px;
-    a {
-      display: block;
-    }
     @media (max-width: $lg) {
       display: flex;
       justify-content: space-between;
@@ -41,6 +36,9 @@
       width: 100%;
     }
     @media (max-width: $sm) {
+      display: block;
+    }
+    a {
       display: block;
     }
   }
@@ -55,16 +53,12 @@
   }
   &__tel {
     margin-bottom: 12px;
-    @extend .footer-items;
     @media (max-width: $lg) {
       margin: 0;
     }
     @media (max-width: $sm) {
       margin-bottom: 10px;
     }
-  }
-  &__email {
-    @extend .footer-items;
   }
   &__menu-body {
     flex: 0 1 71%;
@@ -87,9 +81,9 @@
     display: inline-block;
     margin-bottom: 30px;
     text-transform: uppercase;
-    font-size: calc(0.875 * $fontSize);
-    font-weight: 700;
-    line-height: 1.17;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: normal;
     letter-spacing: 0.07em;
     @media (max-width: $sm) {
       margin: 0 0 10px 0;
@@ -105,7 +99,6 @@
     }
   }
   &__submenu {
-    @extend .footer-items;
     li + li {
       margin-top: 10px;
     }

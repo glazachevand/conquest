@@ -70,10 +70,6 @@ select {
   color: inherit;
 }
 
-input::-ms-clear {
-  display: none;
-}
-
 button,
 input[type="submit"] {
   display: inline-block;
@@ -81,6 +77,10 @@ input[type="submit"] {
   background-color: transparent;
   background: none;
   cursor: pointer;
+}
+
+input::-ms-clear {
+  display: none;
 }
 
 input:focus,

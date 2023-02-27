@@ -8,12 +8,12 @@
     align-items: center;
     column-gap: 5%;
     width: 100%;
-    background: #f7f5ef url("../../img/banner/background2.jpg") right top / 65.7% 100% no-repeat;
+    background: #f7f5ef url("./../img/banner/background2.jpg") right top / 65.7% 100% no-repeat;
     @media (max-width: $md) {
       flex-direction: column;
       justify-content: center;
       row-gap: 20px;
-      background: #fdfdfb;
+      background: $backgroundColor;
     }
   }
   &__swiper {
@@ -66,7 +66,7 @@
   }
   &__pagination {
     font-family: "Prata";
-    font-size: calc(0.75 * $fontSize);
+    font-size: 0.75rem;
     line-height: 1.33;
   }
   &__content {
@@ -74,31 +74,31 @@
     margin-top: 10px;
     @media (max-width: $md) {
       padding: 0 10%;
-      background: url("../../img/banner/background2.jpg") right top / 65.7% 100% no-repeat;
+      background: url("./../img/banner/background2.jpg") right top / 65.7% 100% no-repeat;
     }
   }
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     @media (max-width: $lg) {
       margin-bottom: 15px;
     }
   }
   &__text {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     width: 62.7%;
     line-height: 1.5;
-    color: #444240;
+    color: $mainColor;
     @media (max-width: $xl) {
       width: 100%;
     }
     @media (max-width: $lg) {
       margin-bottom: 20px;
-      font-size: calc(0.75 * $fontSize);
+      font-size: 0.75rem;
     }
   }
   &__btn {
     color: #fff;
-    background-color: #d4b098;
+    background-color: $pinkColor;
     &:hover,
     &:active {
       color: #fff;
