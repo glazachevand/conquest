@@ -55,10 +55,12 @@
     width: 0px;
     color: $darkColor;
     background-color: #f7f5ef;
+    opacity: 0;
     &._active {
       width: 200px;
       border: 1px solid #e4e2dc;
       border-radius: 10px;
+      opacity: 1;
     }
   }
   &__search-btn {
