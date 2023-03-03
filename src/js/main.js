@@ -25,14 +25,12 @@ function dropdownHandler() {
 }
 
 function searchHandler() {
-  const searchBtn = document.querySelector(".header__search-btn");
+  const searchBtn = document.querySelector(".search__btn");
 
   searchBtn?.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(".header__search-form")?.classList.toggle("_active");
-    document
-      .querySelector(".header__search-input")
-      ?.classList.toggle("_active");
+    document.querySelector(".search")?.classList.toggle("_active");
+    document.querySelector(".search__input")?.classList.toggle("_active");
     this.classList.toggle("_active");
   });
 }
