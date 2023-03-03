@@ -1144,15 +1144,18 @@ a {
     background-color: #f7f5ef;
     opacity: 0;
     overflow: auto;
-    -webkit-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    z-index: 50;
   }
 
   .menu__body._active {
     top: 83px;
     opacity: 0.98;
-    z-index: 50;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 
   .menu__list {
@@ -1350,11 +1353,20 @@ a {
   }
 
   .footer-menu__submenu {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
   }
 
   .footer-menu__submenu._active {
-    display: block;
+    max-height: 100px;
+    opacity: 1;
+    -webkit-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
   }
 
   .header__container {
