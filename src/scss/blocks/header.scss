@@ -95,11 +95,12 @@
       background-color: #f7f5ef;
       opacity: 0;
       overflow: auto;
-      transition: all 0.5s ease 0s;
+      transition: all 0.5s ease-out;
+      z-index: 50;
       &._active {
         top: $headerHeight;
         opacity: 0.98;
-        z-index: 50;
+        transition: all 0.5s ease;
       }
     }
   }
