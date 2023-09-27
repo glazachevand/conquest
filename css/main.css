@@ -738,14 +738,18 @@ a {
   padding: 38px 0 40px;
 }
 
+.popular__container {
+  text-align: right;
+}
+
 .popular__title {
   text-align: center;
 }
 
 .popular__see-all {
   position: relative;
+  display: inline-block;
   margin: -5px 0 24px;
-  text-align: right;
   font-weight: 500;
   line-height: normal;
   color: #444240;
@@ -772,13 +776,17 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 23px;
 }
 
 .watches {
   background: #fdfdfb;
+  display: none;
   padding: 40px 28px;
   color: #1b1a17;
+  text-align: left;
 }
 
 .watches a {
@@ -1321,8 +1329,6 @@ a {
   }
 
   .popular__row {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     gap: 10px;
   }
 
