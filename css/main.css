@@ -405,6 +405,7 @@ a {
   font-weight: bold;
   line-height: normal;
   letter-spacing: 0.07em;
+  white-space: nowrap;
 }
 
 .footer-menu__submenu li + li {
