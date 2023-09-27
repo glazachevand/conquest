@@ -16,7 +16,7 @@
       background: $backgroundColor;
     }
   }
-  &__swiper {
+  &__swiper-container {
     flex: 0 0 51.1%;
     @media (max-width: $md) {
       position: relative;
@@ -32,11 +32,14 @@
       }
     }
   }
-  &__swiper-wrapper {
+  &__swiper {
+    margin-top: 52px;
+    margin-right: 0 !important;
     width: 74.6%;
-    margin: 52px 0 0 auto;
+    max-width: 521px;
     @media (max-width: $md) {
-      margin: 40px auto 0;
+      margin-top: 40px;
+      margin-right: auto !important;
       width: 80%;
     }
   }
@@ -45,9 +48,12 @@
     z-index: 20;
     img {
       width: 100%;
+      aspect-ratio: 521 / 414;
+      object-fit: cover;
+      object-position: center;
     }
   }
-  &__pagination-container {
+  &__navigation-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -60,26 +66,32 @@
       margin: 0 auto;
       height: 40px;
     }
+    img {
+      display: block;
+    }
   }
   &__button-next {
     order: 1;
   }
-  &__pagination {
+  &__pagination-container {
+    width: auto !important;
     font-family: "Prata";
     font-size: 0.75rem;
-    line-height: 1.33;
+    line-height: 1;
   }
   &__content {
     flex: 1 1 auto;
     margin-top: 10px;
+    @media (max-width: 1169px) {
+      padding: 0 15px;
+    }
     @media (max-width: $md) {
-      padding: 0 10%;
       background: url("./../img/banner/background2.jpg") right top / 65.7% 100% no-repeat;
     }
   }
   &__title {
     margin-bottom: 26px;
-    @media (max-width: $lg) {
+    @media (max-width: $xl) {
       margin-bottom: 15px;
     }
   }

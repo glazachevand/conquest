@@ -1,7 +1,11 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
 burgerHandler();
 dropdownHandler();
 searchHandler();
 seeAll();
+swiperFunc();
 
 function burgerHandler() {
   const header = document.querySelector(".header");
@@ -60,3 +64,24 @@ function seeAll() {
     }
   });
 }
+
+function swiperFunc() {
+  const swiperBanner = new Swiper('.banner__swiper', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.banner__button-next',
+      prevEl: '.banner__button-prev',
+    },
+    pagination: {
+      el: ".banner__pagination-container",
+      type: 'custom',
+      clickable: true,
+      renderCustom: function (swiper, current, total) {
+
+        return `<span>${total < 10 ? '0' + current : current}</span>`;
+      }
+    },
+  });
+}
+

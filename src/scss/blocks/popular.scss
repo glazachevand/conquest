@@ -12,7 +12,9 @@
   &__see-all {
     position: relative;
     display: inline-block;
-    margin: -5px 0 24px;
+    margin: -5px 0 18px;
+    font-family: $fontFamily;
+    font-size: 16px;
     font-weight: 500;
     line-height: normal;
     color: $mainColor;

@@ -10,6 +10,14 @@ export default {
   },
   webpack: {
     mode: isProd ? 'production' : 'development',
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
+      ],
+    },
   },
   imagemin: {
     // чтобы видеть размеры картинок

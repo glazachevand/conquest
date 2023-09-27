@@ -86,6 +86,9 @@ a:active {
   text-transform: uppercase;
   padding: 26px 38px;
   white-space: nowrap;
+  @media (max-width: $lg) {
+    padding: 20px 26px;
+  }
   @media (max-width: $md) {
     padding: 13px 20px;
   }
