@@ -6,11 +6,19 @@ function burgerHandler() {
   const header = document.querySelector(".header");
   const iconMenu = header.querySelector(".icon-menu");
   const menuBody = header.querySelector(".menu__body");
+  const links = document.querySelectorAll(".menu__link")
 
   iconMenu?.addEventListener("click", function () {
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
   });
+
+  for (const link of links) {
+    link.addEventListener('click', () => {
+      iconMenu?.classList.remove("_active");
+      menuBody?.classList.remove("_active");
+    });
+  }
 }
 
 function dropdownHandler() {
