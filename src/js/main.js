@@ -1,6 +1,7 @@
 burgerHandler();
 dropdownHandler();
 searchHandler();
+seeAll();
 
 function burgerHandler() {
   const header = document.querySelector(".header");
@@ -40,5 +41,22 @@ function searchHandler() {
     document.querySelector(".search")?.classList.toggle("_active");
     document.querySelector(".search__input")?.classList.toggle("_active");
     this.classList.toggle("_active");
+  });
+}
+
+function seeAll() {
+  const watches = document.querySelectorAll('.watches');
+  const btn = document.querySelector('.popular__see-all');
+  // число видимых элементов изначально
+  const n = 3;
+
+  for (let i = 0; i < n; i++) {
+    watches[i].style.display = 'block';
+  }
+
+  btn?.addEventListener('click', () => {
+    for (let i = n; i < watches.length; i++) {
+      watches[i].style.display = 'block';
+    }
   });
 }

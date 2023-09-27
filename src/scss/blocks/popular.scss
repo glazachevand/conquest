@@ -3,13 +3,16 @@
   @media (max-width: $lg) {
     padding: 20px 0;
   }
+  &__container {
+    text-align: right;
+  }
   &__title {
     text-align: center;
   }
   &__see-all {
     position: relative;
+    display: inline-block;
     margin: -5px 0 24px;
-    text-align: right;
     font-weight: 500;
     line-height: normal;
     color: $mainColor;
@@ -31,17 +34,19 @@
   &__row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 23px;
     @media (max-width: $md) {
-      flex-wrap: wrap;
       gap: 10px;
     }
   }
 }
 .watches {
+  display: none;
   padding: 40px 28px;
   color: $darkColor;
   background-color: #fdfdfb;
+  text-align: left;
   a {
     color: $darkColor;
     &:hover,
